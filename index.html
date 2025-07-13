@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Setya Budi - Fire Protection Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --light: #ecf0f1;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
+            color: white;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        .skill-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            margin: 0 8px 8px 0;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+        
+        .skill-badge:hover {
+            background-color: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--secondary);
+        }
+        
+        .timeline-connector {
+            position: absolute;
+            left: 7px;
+            top: 20px;
+            bottom: -30px;
+            width: 1px;
+            background-color: #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-info {
+                margin-top: 1rem;
+            }
+            
+            .profile-photo-container {
+                margin: 0 auto 1rem;
+            }
+        }
+        
+        .print-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            z-index: 100;
+        }
+        
+        .print-button:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        
+        .profile-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        .profile-photo-container {
+            position: relative;
+            width: fit-content;
+            margin-bottom: 1.5rem;
+        }
+        
+        .profile-photo-container:after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            border: 2px dashed var(--secondary);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        
+        .profile-photo-container:hover:after {
+            opacity: 1;
+            transform: rotate(360deg);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-link {
+            color: var(--primary);
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            color: var(--secondary);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto max-w-5xl px-4 py-8 md:py-12">
+        <!-- Header -->
+        <header class="header rounded-xl p-6 mb-8 shadow-lg relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent to-black opacity-10"></div>
+            <div class="header-content flex flex-col md:flex-row justify-between items-start md:items-center relative z-10">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                    <div class="profile-photo-container">
+                        <!-- Replace with actual photo path -->
+                        <img src="assets/Aditya.jpg" 
+                             alt="Aditya Setya Budi" 
+                             class="profile-photo">
+                    </div>
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-bold mb-2">Aditya Setya Budi</h1>
+                        <p class="text-lg md:text-xl opacity-90">Fire Protection Engineer</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="mailto:adityasetyabudi.20@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info bg-white text-gray-800 mt-4 md:mt-0 p-4 rounded-lg shadow-inner">
+                    <p class="mb-1"><i class="fas fa-map-marker-alt mr-2"></i> Cilacap, Jawa Tengah, Indonesia</p>
+                    <p class="mb-1"><i class="fas fa-phone mr-2"></i> 0813-8084-8276</p>
+                    <p><i class="fas fa-envelope mr-2"></i> adityasetyabudi.20@gmail.com</p>
+                </div>
+            </div>
+        </header>
+        
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Left Column -->
+            <div class="lg:w-2/3">
+                <!-- Summary -->
+                <section class="bg-white rounded-xl p-6 mb-6 shadow-md">
+                    <h2 class="section-title text-xl font-bold">Summary</h2>
+                    <p>Dedicated Fire Protection Engineer with extensive experience in automatic fire protection systems, fire risk assessment, and project management. Proven ability to manage fire protection construction projects with budgets exceeding IDR 10 Billion. Skilled in providing technical authority, cost management, team building, and training in fire safety and emergency response. Committed to maintaining compliance with Indonesian and international regulatory standards.</p>
+                </section>
+                
+                <!-- Outstanding Achievements -->
+                <section class="bg-white rounded-xl p-6 mb-6 shadow-md">
+                    <h2 class="section-title text-xl font-bold mb-6">Outstanding Achievements</h2>
+                    <div class="space-y-4">
+                        <div class="achievement flex items-start">
+                            <div class="mr-4 mt-1 text-red-500">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <p>Fire Pump System Reset in accordance with NFPA20 and NFPA 14.</p>
+                        </div>
+                        <div class="achievement flex items-start">
+                            <div class="mr-4 mt-1 text-red-500">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <p>Fire alarm and suppression system reset in accordance with NFPA 12, 70, 72, and NFPA 2001.</p>
+                        </div>
+                        <div class="achievement flex items-start">
+                            <div class="mr-4 mt-1 text-red-500">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <p>Leading fire risk assessment and evaluation in all PT Solusi Bangun Indonesia Tbk and Packing plant PT Solusi Bangun Indonesia plants in 2022 - 2024 in accordance with Permenaker and NFPA.</p>
+                        </div>
+                        <div class="achievement flex items-start">
+                            <div class="mr-4 mt-1 text-red-500">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <p>Leading Fire alarm and suppression system project in 2014 - present without any LTI.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Work Experience -->
+                <section class="bg-white rounded-xl p-6 mb-6 shadow-md">
+                    <h2 class="section-title text-xl font-bold mb-6">Work Experience</h2>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-connector"></div>
+                        <h3 class="font-bold text-lg">PT Solusi Bangun Indonesia Tbk</h3>
+                        <p class="text-gray-600 mb-2">Fire Protection Engineer | January 2022 - Present</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Project planning fire protection</li>
+                            <li>Project control fire protection</li>
+                            <li>Project Management fire protection</li>
+                            <li>Employee Training fire protection</li>
+                            <li>Leading fire risk assessment and evaluation</li>
+                            <li>Designer and prepare budget including material specifications used for fire protection project</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-connector"></div>
+                        <h3 class="font-bold text-lg">PT PRIMA TUNGGAL JAVALAND</h3>
+                        <p class="text-gray-600 mb-2">Technical Specialist Fire Protection System | October 2013 - December 2021</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Project control fire protection</li>
+                            <li>Project Management fire protection</li>
+                            <li>Employee Training fire protection</li>
+                            <li>Construction Site Management</li>
+                            <li>Supervisory Skills</li>
+                            <li>Technical fire protection</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="lg:w-1/3">
+                <!-- Skills -->
+                <section class="bg-white rounded-xl p-6 mb-6 shadow-md">
+                    <h2 class="section-title text-xl font-bold">Skills</h2>
+                    <div class="mt-4 flex flex-wrap">
+                        <span class="skill-badge">Construction Site Management</span>
+                        <span class="skill-badge">Supervisory Skills</span>
+                        <span class="skill-badge">Employee Training</span>
+                        <span class="skill-badge">Construction Safety</span>
+                        <span class="skill-badge">Project Planning</span>
+                        <span class="skill-badge">Project Control</span>
+                        <span class="skill-badge">Project Management</span>
+                        <span class="skill-badge">Technical Fire Protection</span>
+                        <span class="skill-badge">Risk Assessment</span>
+                        <span class="skill-badge">Emergency Response</span>
+                        <span class="skill-badge">Team Leadership</span>
+                    </div>
+                </section>
+                
+                <!-- Areas of Expertise -->
+                <section class="bg-white rounded-xl p-6 mb-6 shadow-md">
+                    <h2 class="section-title text-xl font-bold">Areas of Expertise</h2>
+                    <ul class="mt-4 space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-fire-extinguisher text-red-500 mr-2 mt-1"></i>
+                            <span>Fire alarm and suppression system installation design (Ref SNI-03-1735-2000, SNI-03-3945-200, Perm PU20-2009, NFPA 12,13,14,15,20,22,70,72,2001)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-red-500 mr-2 mt-1"></i>
+                            <span>Fire risk assessment and evaluation (Ref PermPU20-2009, NFPA 1,101,850,551 and API 650)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-people-carry text-red-500 mr-2 mt-1"></i>
+                            <span>Emergency Response Plan Development, Coaching, consultation & training, Strategic Planning</span>
+                        </li>
+                    </ul>
+                </section>
+                
+                <!-- Education -->
+                <section class="bg-white rounded-xl p-6 shadow-md">
+                    <h2 class="section-title text-xl font-bold">Education</h2>
+                    <div class="timeline-item mt-4">
+                        <div class="timeline-connector"></div>
+                        <h3 class="font-bold">S1 Electrical Engineering</h3>
+                        <p class="text-gray-600">Wijayakusuma University, Purwokerto</p>
+                        <p class="text-sm text-gray-500">July 2009 - June 2012</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="font-bold">Automotive Engineering</h3>
+                        <p class="text-gray-600">SMK Cipta Karya, Prembun</p>
+                    </div>
+                </section>
+                
+                <!-- Languages -->
+                <section class="bg-white rounded-xl p-6 mt-6 shadow-md">
+                    <h2 class="section-title text-xl font-bold">Languages</h2>
+                    <div class="mt-4 space-y-3">
+                        <div>
+                            <p class="font-medium">Indonesian <span class="text-gray-600">(Native)</span></p>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mt-1">
+                                <div class="bg-red-500 h-2.5 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-medium">English <span class="text-gray-600">(Professional)</span></p>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mt-1">
+                                <div class="bg-red-500 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Print Button -->
+    <button class="print-button hidden md:block" onclick="window.print()">
+        <i class="fas fa-print mr-2"></i> Print CV
+    </button>
+    
+    <script>
+        // Animation for skill badges
+        document.querySelectorAll('.skill-badge').forEach(badge => {
+            badge.addEventListener('mouseenter', () => {
+                badge.style.transform = 'translateY(-3px)';
+                badge.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+            });
+            badge.addEventListener('mouseleave', () => {
+                badge.style.transform = '';
+                badge.style.boxShadow = '';
+            });
+        });
+        
+        // Animation for profile photo
+        const profilePhoto = document.querySelector('.profile-photo');
+        if (profilePhoto) {
+            profilePhoto.addEventListener('mouseenter', () => {
+                profilePhoto.style.transform = 'scale(1.05) rotate(2deg)';
+            });
+            profilePhoto.addEventListener('mouseleave', () => {
+                profilePhoto.style.transform = 'scale(1) rotate(0)';
+            });
+        }
+    </script>
+</body>
+</html>
